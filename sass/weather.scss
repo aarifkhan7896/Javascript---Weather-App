@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #142d4c;
+    color: #fff;
+}
+
+.outer{
+    display: flex;
+    align-items: center;
+    height: 50rem;
+    flex-direction: column;
+    justify-content: center;
+
+    .container{
+        width: 30%;
+        text-align: center;
+
+        form{
+            text-align: center;
+            input[type="text"]{
+                padding: 1rem;
+                font-size: 1.6rem;
+                border: none;
+                border-radius: 1rem;
+                width: 90%;
+                transition: all .5s ease-in-out;
+
+                &:focus{
+                    border: none;
+                    outline: none;
+                    color: gray;
+                    width: 100%;
+                }
+            }
+            #search{
+                border: 2px solid green;
+                padding: 1rem 2rem;
+                margin: 1rem 0;
+                cursor: pointer;
+                color: green;
+                border-radius: .5rem;
+                transition: all .5s ease-in-out;
+
+                &:hover{
+                    background-color: green;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.app{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 60rem;
+    color: black;
+    animation: animate .5s ease-in-out;
+
+    .card{
+        text-align: center;
+        line-height: 2cm;
+        background-color: #9fd3c7;
+        padding: 3rem;
+        width: 30%;
+        border-radius: 1rem;
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+
+        .heading{
+            font-size: 5rem;
+            font-weight: bold;
+            color: #05445E;
+        }
+        .innerHeading{
+            font-size: 4rem;
+            font-weight: bold;
+            color: #0E86D4;
+        }
+        .temperature{
+            font-size: 3rem;
+            font-weight: 400;
+        }
+        #again{
+            background-color: dodgerblue;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+.show{
+    display: flex;
+}
+@keyframes animate {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@media only screen and (max-width:900px) {
+    html{
+        font-size: 50%;
+    }
+}
